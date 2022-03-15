@@ -8,9 +8,9 @@ Ask 250,000 people the following question: "*How often do you wear a mask in pub
 
 Among the 3,114 US counties that could be matched between the mask usage survey data and the JHU CSSE dataset, masking scores range from about 35 to about 95.
 
-We find a moderate correlation between masking score and case numbers (R² = 0.240); low mask usage counties reported about 3 times more cases per capita than high mask usage counties.
+We find a moderate correlation between masking score and case numbers (R² = 0.240). A low mask usage score of 60 is associated to reporting twice as many cases per capita than a high mask usage score of 90.
 
-Note that this analysis does not control for other variables and is likely subject to confounding biases, eg. people who report more frequent mask usage probably follow stronger social distancing protocols.
+Note that this analysis does not control for other variables and is subject to confounding biases, for example people who report more frequent mask usage probably adhere to stronger social distancing protocols.
 
 ## Methodology
 
