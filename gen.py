@@ -52,8 +52,9 @@ def chart(counties):
     return
 
 def init():
-    # NYT mask use data
-    df = pd.read_csv('../nyt-covid-19-data/mask-use/mask-use-by-county.csv')
+    # survey mask use data from
+    # https://github.com/nytimes/covid-19-data/blob/master/mask-use/mask-use-by-county.csv
+    df = pd.read_csv('mask-use-by-county.csv')
     # Calculate masking score
     df['score'] = \
         0 * df['NEVER'] + \
@@ -65,15 +66,17 @@ def init():
     for _, row in df.iterrows():
         counties[int(row['COUNTYFP'])] = { 'score': float(row['score']) }
     # population data
+    # download this from https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_US.csv
     population = {}
-    df = pd.read_csv('../jhu-csse-COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_US.csv')
+    df = pd.read_csv('time_series_covid19_deaths_US.csv')
     for _, row in df.iterrows():
         fips = row['FIPS']
         if math.isnan(fips):
             continue
         population[int(fips)] = int(row['Population'])
     # JHU data
-    df = pd.read_csv('../jhu-csse-COVID-19/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv')
+    # download this from https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv
+    df = pd.read_csv('time_series_covid19_confirmed_US.csv')
     for _, row in df.iterrows():
         fips = row['FIPS']
         if math.isnan(fips):
