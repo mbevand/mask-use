@@ -1,6 +1,6 @@
 # Comparing mask use to COVID-19 case numbers
 
-Ask 250,000 people the following question: "*How often do you wear a mask in public when you expect to be within six feet of another person?*" and their answers correlate with COVID-19 case numbers across 3,000+ United States counties:
+Ask 250,000 people: "*How often do you wear a mask in public when you expect to be within six feet of another person?*" and their answers correlate with COVID-19 case numbers across 3,000+ United States counties. On average, low mask usage counties (score=60) reported about twice as many cases per capita as high mask usage counties (score=90):
 
 ![Comparing mask use to COVID-19 case numbers](chart.png)
 
